@@ -65,8 +65,8 @@ class BST{
 // 2- printing BST in postorder
 		void printPostorder(node *temp){
 			if(temp != NULL){
-				printInorder(temp -> left);
-				printInorder(temp -> right);
+				printPostorder(temp -> left);
+				printPostorder(temp -> right);
 				cout << temp -> data;
 			}
 		}
@@ -74,8 +74,8 @@ class BST{
 		void printPreorder(node *temp){
 			if(temp != NULL){
 				cout << temp -> data;
-				printInorder(temp -> left);
-				printInorder(temp -> right);
+				printPreorder(temp -> left);
+				printPreorder(temp -> right);
 			}
 		}
 };
